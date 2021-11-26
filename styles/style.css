@@ -1,5 +1,52 @@
 /* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
 }
 
+:root {
+  background-color: aliceblue;
+}
+
+/* ALGEMENE STIJLEN */
+
+/* HEADER */
+
+/* MAIN */
+
+/* SECTION - LEVERING*/
+
+/* SECTION - 2*/
+
+section img:nth-child(2) {
+  width: 20px;
+}
+
+/* SECTION - 3 */
+
+/* SECTION - CATEGORIEEN */
+
+ul:nth-child(2) {
+  list-style-type: none;
+  display: flex;
+  gap: 2em;
+  padding: 0;
+
+}
+
+ul h3,
+h4 {
+  padding: 0 1em;
+}
+
+ul img {
+  border-radius: 50%;
+}
+
+
+/* SECTION - ARTICLE */
+
+/* FOOTER */
+
+/* unicode */
