@@ -3,46 +3,143 @@
 *::after,
 *::before {
   box-sizing: border-box;
+  font-family: 'Avenir';
+  margin: .5em;
 }
 
-:root {
-  background-color: aliceblue;
-}
-
+/* :root {
+  
 /* ALGEMENE STIJLEN */
 
-/* HEADER */
+
+header img {
+  width: 2em;
+  position: absolute;
+  left: 7em;
+  top: 2em;
+}
+
+header nav a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: auto;
+  transform: translateX(-110%);
+  transition: 1s;
+}
+
+header nav li:nth-child(6),
+header nav li:nth-child(7) {
+  text-transform: uppercase;
+}
+
+header button {
+  position: absolute;
+  z-index: 200;
+  padding: .7em;
+  border: none;
+  background-color: white;
+}
+
+header nav.toonMenu button {
+  left: 70%;
+  top: 50%;
+  transform: translatey(-50%);
+}
+
+header nav.toonMenu ul {
+  transform: translatex(0%);
+  margin-top: 0;
+  left: 1em;
+  display: block;
+  width: 297px;
+  /* background-image: linear-gradient(to right, white 85%, #00000080 15%); */
+  background-color: white;
+}
+
+header nav.toonMenu li {
+  text-decoration: none;
+  margin-top: 2em;
+  font-weight: 500;
+}
+
+header nav button::before {
+  content: "\2630";
+}
+
+header nav.toonMenu button::before {
+  content: "\00d7";
+}
+
 
 /* MAIN */
 
 /* SECTION - LEVERING*/
 
+section:nth-of-type(1) h2 {
+  display: flex;
+  align-items: center;
+}
+
+section:nth-of-type(1) h2::after {
+  /* content: "🚚"; */
+  transform: scalex(-1);
+  display: block;
+}
+
+section:nth-of-type(1) h2:hover::after {
+  transform: scalex(-1) skewX(-10deg);
+}
+
+/* 320 - 540px */
 /* SECTION - 2*/
 
-section img:nth-child(2) {
-  width: 20px;
+section:nth-of-type(2) img {
+  width: 250px;
 }
 
 /* SECTION - 3 */
 
+section:nth-of-type(3) h2 {
+  font-size: 20px;
+  position: absolute;
+  left: 4em;
+  top: 90%;
+}
+
+section:nth-of-type(3) p {
+  font-size: 15px;
+  position: absolute;
+  bottom: 0;
+  top: 95%;
+}
+
+
 /* SECTION - CATEGORIEEN */
+
+section:nth-of-type(4) img {
+  width: 50px;
+  border-radius: 50%;
+}
 
 ul:nth-child(2) {
   list-style-type: none;
   display: flex;
   gap: 2em;
   padding: 0;
-
 }
 
-ul h3,
+/* ul h3,
 h4 {
   padding: 0 1em;
-}
+} */
 
-ul img {
-  border-radius: 50%;
-}
+
 
 
 /* SECTION - ARTICLE */
