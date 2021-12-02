@@ -83,11 +83,11 @@ Ik had moeite met het selecteren van de juiste sections. Ik wilde 1 image select
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| Yasmina        | Cheun              | Selina       | student 4        |
-| ---            | ---                | ---          | ---              |
-| Hoe selecteer  | en dit             | en ik dit    | en dan ik dat    |
-| ik de juiste   | dit als er tijd is | nog een punt | dit wil ik zeker |
-| img?           | ...                | ...          | ...              |
+| Yasmina        | Cheun                        |  
+| ---            | ---                          |
+| Hoe selecteer  | Navigatie probleem oplossen. | 
+| ik de juiste   | dit als er tijd is           | 
+| img?           | ...                          |
 
 
 ### Verslag van meeting
@@ -117,11 +117,11 @@ Het enige probleem is, als je de nav sluit dan zie je alle elementen verschuiven
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| Yasmina                                 | student 2          | student 3    | student 4        |
-| ---                                     | ---                | ---          | ---              |
-| Line break in css                       | en dit             | en ik dit    | en dan ik dat    |
-| Ruimte tussen foto's smaller maken      | dit als er tijd is | nog een punt | dit wil ik zeker |
-| Opacity wijzigen als de nav open gaat.  | ...                | ...          | ...              |
+| Yasmina                                                                           | Cheun              | Selina         | 
+| ---                                                                               | ---                | ---            | 
+| Tekst onder de afbeelding krijgen.                                                |                    |                |
+| H&M logo blijft in de nav zitten  |                    |                |
+| Elementen uit de nav schuiven op.                                            | ...                | ...            |
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
