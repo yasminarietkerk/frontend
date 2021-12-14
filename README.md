@@ -51,11 +51,10 @@ Punten
 
 
 ## Breakdownschets (week 1)
-
-<img src="images/breakdownschets.jpg" alt="breakdownschets">
-
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
+
+<img src="images/breakdownschets.jpg" alt="breakdownschets">
 
 ### de hele pagina: 
 <img src="images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">

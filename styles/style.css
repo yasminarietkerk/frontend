@@ -52,7 +52,6 @@ header nav ul {
   display: block;
   position: fixed;
   top: 0;
-  height: 50%;
   transform: translateX(-110%);
 }
 
@@ -69,9 +68,6 @@ header nav a {
 
 
 /* NAVIGATIE GEOPEND */
-.toonMenu {
-  overflow: hidden;
-}
 
 header nav.toonMenu button {
   left: 80%;
