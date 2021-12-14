@@ -52,6 +52,8 @@ Punten
 
 ## Breakdownschets (week 1)
 
+<img src="images/breakdownschets.jpg" alt="breakdownschets">
+
 <details>
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
@@ -106,7 +108,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Voortgang 2 (week 3)
 
-<details open>
+<details>
 <summary>uitwerken voor 2e voortgang</summary>
 
 ### Stand van zaken
@@ -126,10 +128,9 @@ samen met je groepje opstellen
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Tekst onder de afbeelding met: display: flex; flex-direction: column-reverse;
+- Met display: block; verschuiven de elementen uit de nav niet meer.
+- Geen standaard margin meegeven, maar op individuele elementen.
 
 </details>
 
@@ -138,6 +139,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 
 ## Toegankelijkheidstest (week 4)
+
+(moet ik nog doen)
 
 <details>
 <summary>uitwerken na test in 8e voortgang</summary>
@@ -186,20 +189,17 @@ hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je we
 ### Agenda voor meeting
 samen met je groepje opstellen
 
-| student 1      | student 2          | student 3    | student 4        |
+| Yasmina      | student 2          | student 3    | student 4        |
 | ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
+| De nav werkt niet goed. Als hij opent kun je blijven scrollen en dat hoort niet  | en dit             | en ik dit    | en dan ik dat    |
+| Ik heb 5 afbeeldingen op mijn tweede pagina, er moeten er 2 naast elkaar en nu staan ze alle 5 naast elkaar.| dit als er tijd is | nog een punt | dit wil ik zeker |
 | ...            | ...                | ...          | ...              |
 
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Ik was niet bij de meeting, omdat mijn opa en oma 50 jaar getrouwd waren, maar het probleem met de foto's is opgelost door een div te gebruiken.
 
 </details>
 
@@ -209,14 +209,15 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ## Eindgesprek (week 5)
 
-<details>
+<details open>
 <summary>uitwerken voor eindgesprek</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+wat goed ging was het namaken van de website. Ik had verwacht dat ik dit lastiger zou vinden, maar het ging beter dan verwacht. Wat ik lastig vind is een goede navigatie maken. Ik heb nu dat de rest van de pagina zichtbaar blijft als je nav opent en dat is niet de bedoeling. Verder had ik ook tijd te kort, want ik wilde eigenlijk meer animatie toepassen en veel meer werken met JS, maar dat is niet gelukt.
 
 ### Screenshot(s)
-
+<img src="images/helepagina1.png" alt="screenshot van de eerste pagina">
+<img src="images/helepagina2.png" alt="screenshot van de tweede pagina">
 hier screenshot(s) van je eindresultaat
 
 </details>
@@ -227,13 +228,13 @@ hier screenshot(s) van je eindresultaat
 
 ## Bronnenlijst
 
-<details open>
+<details>
 <summary>continu bijhouden terwijl je werkt</summary>
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+2. https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count?retiredLocale=nl
+3. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX()
 
 </details>

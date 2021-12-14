@@ -7,5 +7,4 @@ function toonMenu(event) {
     deNav.classList.toggle("toonMenu");
 }
 
-var Button = document.querySelector("nav button");
 button.addEventListener("click", toonMenu);
