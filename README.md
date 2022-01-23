@@ -138,37 +138,24 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 
 ## Toegankelijkheidstest (week 4)
-
-(moet ik nog doen)
-
 <details>
 <summary>uitwerken na test in 8e voortgang</summary>
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### Headings
+De structuur van de headings is logisch. De H1 staat op hidden. Hierdoor zit er een goede volgorde in.
+In alle sections zit een H2 en in de article en de trending section zit een h3 en h4, allemaal op volgorde.
 
 
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Linkjes 
+Het is duidelijk wat de linkjes doen. Ik heb niet veel linkjes gebruikt in mijn opdracht, 
+omdat dat in de website van de H&M niet nodig is. Ik heb linkjes gebruikt voor de navigatie. Daarin is duidelijk wat de linkjes doen.
 
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel nog een bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+#### States 
+Ik had nog geen states gebruikt. Ik heb voor de 'all eyes on you' section een hover toegevoegd.
+Ik heb een hover met een opacity van 60% gebruikt als je hovert. Ik heb een active staat van 0% toegevoegd.
 
 </details>
 
@@ -235,5 +222,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 1. https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 2. https://developer.mozilla.org/en-US/docs/Web/CSS/animation-iteration-count?retiredLocale=nl
 3. https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translateX()
+4. https://css-tricks.com/a-complete-guide-to-dark-mode-on-the-web/#toggling-themes
 
 </details>

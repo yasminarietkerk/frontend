@@ -7,24 +7,43 @@
   margin: 0;
 }
 
+/* CUSTOM PROPERTIES */
 :root {
-  --main-color: black;
   --text-color: gray;
   --textimg-color: white;
   --background-color: white;
-  --background-button: lightgrey;
-  --magazin-color: #f4eddd;
-  --footer-color: #e4e4e4;
+  --background-button: lightgray;
   --color-buttons: #fcfcfc;
   --background-colorbutton: black;
+  --main-color: black;
+  --hartje-color: red;
+  --active-color: red;
+  --hover-color: lightpink;
+  --focus-color: lightblue;
 }
 
-/* ALGEMENE STIJLEN */
-/* main img {
-  width: 85%;
-  margin-left: 8%;
-  margin-bottom: 5%;
-} */
+
+/* DARKTHEME CUSTOM PROPERTIES */
+body {
+  --txt-color: #222;
+  --bkg-color: #fff;
+  --button-text: #fff;
+  --button-color: #222;
+  --magazin-color: #f4eddd;
+}
+
+body.dark-theme {
+  --txt-color: #eee;
+  --button-text: #222;
+  --bkg-color: #121212;
+  --button-color: #eee;
+  --magazin-color: #222;
+}
+
+body {
+  color: var(--txt-color);
+  background-color: var(--bkg-color);
+}
 
 h1 {
   display: none;
@@ -36,10 +55,10 @@ h1 {
 /* HEADER */
 
 header img {
-  width: 2em;
   position: absolute;
-  left: 27%;
   top: 1.5em;
+  left: 27%;
+  width: 2em;
 }
 
 header button {
@@ -48,7 +67,21 @@ header button {
   left: 6%;
   padding: .7em;
   border: none;
-  background-color: var(--background-color);
+  background-color: var(--bkg-color);
+  color: var(--txt-color);
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: var(--hover-color);
+}
+
+header button:active {
+  background-color: var(--active-color);
+}
+
+header button:focus {
+  background-color: var(--focus-color);
 }
 
 header nav ul {
@@ -67,8 +100,8 @@ header nav li:nth-child(7) {
 }
 
 header nav a {
+  color: var(--txt-color);
   text-decoration: none;
-  color: var(--main-color);
 }
 
 
@@ -80,12 +113,21 @@ body.toonMenu {
 }
 
 body.toonMenu header nav ul {
-  transform: translatex(0%);
-  margin-top: 0;
   display: block;
   width: 85%;
-  background-color: var(--background-color);
+  transform: translatex(0%);
+  background-color: var(--bkg-color);
   transition: 1s;
+}
+
+body.toonMenu header nav ul li:first-of-type {
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 10%;
+  background-color: var(--hover-color);
+  font-weight: 100;
+  text-transform: uppercase;
 }
 
 body.toonMenu header nav li:nth-child(n+2) {
@@ -93,29 +135,29 @@ body.toonMenu header nav li:nth-child(n+2) {
 }
 
 body.toonMenu header nav li {
-  text-decoration: none;
+  display: flex;
+  /* text-decoration: none; */
   margin-top: 2em;
   font-weight: 500;
-  display: flex;
 }
 
-body.toonMenu header nav ul li:first-of-type {
-  background-color: lightpink;
-  margin: 0;
-  align-items: center;
-  justify-content: center;
-  text-transform: uppercase;
-  font-weight: 100;
-  width: 100%;
-  height: 10%;
+body.toonMenu header nav ul li:nth-of-type(2):hover {
+  background-color: var(--hover-color);
+}
+
+body.toonMenu header nav ul li:nth-of-type(2):active {
+  background-color: var(--active-color);
+}
+
+body.toonMenu header nav ul li:nth-of-type(2):focus {
+  background-color: var(--focus-color);
 }
 
 body nav img {
   position: absolute;
-  left: 15%;
   top: 2%;
+  left: 15%;
 }
-
 
 header nav button::before {
   content: "\2630";
@@ -127,25 +169,61 @@ body.toonMenu header nav button::before {
 
 body.toonMenu header nav button {
   position: fixed;
-  left: 81%;
   top: 50%;
+  left: 81%;
+  z-index: 1;
+  color: var(--txt-color);
   background-color: var(--background-button);
 }
 
+/* darkmode button */
+.btn-toggle {
+  position: absolute;
+  top: 4%;
+  right: 20%;
+  width: 25%;
+  height: 5%;
+  border: none;
+  background-color: var(--button-color);
+  color: var(--button-text);
+}
+
+/* geel hartje */
+.geelhartje {
+  position: absolute;
+  top: 4%;
+  right: 5%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+span {
+  position: absolute;
+  top: -10%;
+  left: 60%;
+  width: 50%;
+  height: 50%;
+  border-radius: 50%;
+  background-color: var(--hartje-color);
+  color: var(--txt-color);
+  font-size: 60%;
+}
 
 
 /* SECTION - LEVERING*/
 section:first-of-type h2 {
-  font-size: 15px;
+  font-size: 100%;
   font-weight: 100;
   margin: 6em 0em 2em 4em;
 }
 
-section:nth-of-type(1) h2::after {
+.pagina1 section:nth-of-type(1) h2::after {
   content: "🚚";
-  transform: scalex(-1);
   display: block;
   width: 50%;
+  transform: scalex(-1);
 }
 
 section:nth-of-type(1) h2:hover::after {
@@ -171,45 +249,35 @@ section:nth-of-type(1) h2:hover::after {
   animation-iteration-count: 3;
 }
 
+@keyframes geelhartje {
 
-
-@keyframes letters {
-  0% {
-    transform: scale(1) translatey(0);
+  0%,
+  25% {
+    transform: scale(1);
   }
 
-  20% {
-    transform: scale(1.25, .75) translatey(0);
-    color: black;
+  45% {
+    transform: scale(1.2);
   }
 
   50% {
-    transform: scale(.75, 1.5) translatey(-1em);
-    color: red;
+    transform: scale(.85);
   }
 
-  80% {
-    transform: scale(1.25, .75);
-    color: black;
+  55% {
+    transform: scale(1.2);
   }
 
   100% {
-    transform: scale(1) translatey(0);
+    transform: scale(1);
   }
 }
 
-section:nth-of-type(1) h2 {
-  --letters-time: .75s;
-}
 
-section:nth-of-type(1) h2 {
-  transform-origin: center bottom;
-}
-
-section:nth-of-type(1):hover h2 {
-  animation-name: letters;
-  animation-duration: 1s;
-  animation-iteration-count: 2;
+.geelhartje:hover {
+  animation-name: geelhartje;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
 }
 
 
@@ -242,8 +310,8 @@ section:nth-of-type(2) h2 {
 
 section:nth-of-type(2) p {
   position: absolute;
-  left: 15%;
   top: 50%;
+  left: 15%;
   width: 70%;
   font-size: 80%;
   text-align: center;
@@ -262,6 +330,20 @@ section:nth-of-type(3) {
 section:nth-of-type(3) img {
   width: 100%;
 }
+
+/* states */
+section:nth-of-type(3) img:hover {
+  opacity: 60%;
+}
+
+section:nth-of-type(3) img:active {
+  border-radius: 50%;
+}
+
+section:nth-of-type(3) img:focus {
+  opacity: 0%;
+}
+
 
 section:nth-of-type(3) h2 {
   position: absolute;
@@ -292,8 +374,8 @@ section:nth-of-type(4) {
 }
 
 ul:nth-child(2) {
-  list-style-type: none;
   display: flex;
+  list-style-type: none;
   gap: 2.2em;
   padding: 0;
   overflow-x: auto;
@@ -305,26 +387,25 @@ ul li:nth-of-type(7) h4 {
 }
 
 section:nth-of-type(4) li {
-  max-width: 2em;
-  margin-left: .2em;
   display: flex;
   flex-direction: column-reverse;
+  width: 2em;
+  margin-left: 2%;
 }
 
 section:nth-of-type(4) h2 {
-  font-size: 18px;
+  font-size: 110%;
   margin-bottom: 5%;
 }
 
 section:nth-of-type(4) h3 {
   color: var(--text-color);
-  font-size: 15px;
+  font-size: 100%;
   margin-bottom: 100%;
 }
 
 section:nth-of-type(4) h4 {
   margin-top: 40%;
-  font-size: 15px;
 }
 
 ul li:nth-of-type(4) h3,
@@ -335,6 +416,11 @@ ul li:nth-of-type(4) h4 {
 section:nth-of-type(4) img {
   width: 200%;
   border-radius: 50%;
+}
+
+section:nth-of-type(4) li:nth-of-type(8) h3 {
+  text-transform: uppercase;
+  width: 320%;
 }
 
 
@@ -348,7 +434,6 @@ section:nth-of-type(5) {
 
 section:nth-of-type(5) img {
   width: 100%;
-
 }
 
 section:nth-of-type(5) h2 {
@@ -357,7 +442,7 @@ section:nth-of-type(5) h2 {
   bottom: 40%;
   width: 60%;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-size: 25px;
+  font-size: 150%;
   font-weight: 100;
   text-align: center;
   color: var(--textimg-color);
@@ -368,7 +453,7 @@ section:nth-of-type(5) p {
   left: 10%;
   top: 70%;
   width: 80%;
-  font-size: 15px;
+  font-size: 100%;
   text-align: center;
   color: var(--textimg-color);
 }
@@ -378,33 +463,37 @@ section:nth-of-type(5) p {
 /* SECTION - MAGAZINE */
 section:nth-of-type(6) {
   position: relative;
-  background-color: var(--magazin-color);
   height: 60em;
+  background-color: var(--magazin-color);
 }
 
 section:nth-of-type(6) h2 {
   position: absolute;
-  left: 30%;
   top: 10%;
-  font-size: 25px;
-  text-transform: uppercase;
+  left: 30%;
+  font-size: 150%;
   text-align: center;
+  text-transform: uppercase;
+}
+
+article:first-of-type {
+  color: var(--main-color);
 }
 
 section:nth-of-type(6) h3 {
   position: absolute;
-  left: 30%;
   top: 15%;
-  font-size: .8em;
-  font-weight: 100;
+  left: 30%;
+  font-size: 80%;
   text-align: center;
+  font-weight: 100;
 }
 
 section:nth-of-type(6) article h3 {
   position: absolute;
   top: 37%;
   left: 35%;
-  font-size: .9em;
+  font-size: 90%;
   font-weight: 100;
   text-transform: uppercase;
   z-index: 200;
@@ -412,19 +501,19 @@ section:nth-of-type(6) article h3 {
 
 section:nth-of-type(6) h4 {
   position: absolute;
-  left: 20%;
   top: 42%;
-  font-size: .9em;
-  max-width: 60%;
+  left: 20%;
+  font-size: 90%;
+  width: 60%;
   text-align: center;
   z-index: 200;
 }
 
 section:nth-of-type(6) p {
   position: absolute;
-  left: 35%;
   top: 50%;
-  font-size: .8em;
+  left: 35%;
+  font-size: 80%;
   font-weight: 700;
   text-align: center;
   z-index: 200;
@@ -432,63 +521,67 @@ section:nth-of-type(6) p {
 
 section:nth-of-type(6) img:first-of-type {
   position: absolute;
-  left: 15%;
   top: 20%;
+  left: 15%;
   width: 70%;
 }
 
 section:nth-of-type(6) img:nth-of-type(2) {
   position: absolute;
   top: 35%;
+  left: 15%;
   width: 70%;
   height: 20%;
-  left: 15%;
 }
 
 
 
 /* SECTION - MAGAZINE TWEEDE ARTIKEL */
+section:nth-of-type(7) {
+  color: var(--main-color);
+}
+
 section:nth-of-type(7) img:first-of-type {
   position: absolute;
-  left: 15%;
   top: 300%;
+  left: 15%;
   width: 70%;
 }
 
 section:nth-of-type(7) img:nth-of-type(2) {
   position: absolute;
-  left: 15%;
   top: 326%;
+  left: 15%;
   width: 70%;
   height: 28%;
 }
 
 section:nth-of-type(7) article h3 {
-  text-transform: uppercase;
-  font-weight: 100;
-  font-size: .9em;
-  z-index: 200;
   position: absolute;
   top: 330%;
   left: 35%;
+  font-size: 90%;
+  font-weight: 100;
+  text-transform: uppercase;
+  z-index: 200;
 }
 
 section:nth-of-type(7) h4 {
-  font-size: 1em;
-  text-align: center;
   position: absolute;
-  left: 32%;
   top: 337%;
+  left: 32%;
+  font-size: 100%;
+  text-align: center;
   z-index: 200;
 }
 
 section:nth-of-type(7) p {
-  font-size: .8em;
+  position: absolute;
+  top: 345%;
+  left: 35%;
+  font-size: 80%;
   font-weight: 700;
   text-align: center;
-  position: absolute;
-  left: 35%;
-  top: 345%;
   z-index: 200;
 }
 
@@ -504,15 +597,14 @@ section:nth-of-type(7) p {
 }
 
 .pagina2 section:nth-of-type(1) p {
-  font-weight: 500;
-  font-size: .7em;
   margin: 22% 0% 0% 13%;
+  font-weight: 500;
+  font-size: 70%;
 }
 
 .pagina2 section:nth-of-type(1) img {
-  margin-top: 10%;
   width: 85%;
-  top: 20%;
+  margin-top: 10%;
   margin-left: 7%;
 }
 
@@ -520,21 +612,30 @@ section:nth-of-type(7) p {
   width: 40%;
   margin: 15% 0% 0% 30%;
   left: 23%;
-  border: 1px solid black;
+  border: 1px solid;
 }
 
+/* paars hartje */
+.pagina2 section:nth-of-type(1) button {
+  position: absolute;
+  top: 72%;
+  right: 15%;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
 
-
-/* SECTION 2 */
+/* SECTION TEKST  */
 .pagina2 section:nth-of-type(2) p {
   position: absolute;
   top: 15%;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  text-align: left;
   left: 0%;
   width: 100%;
-  color: var(--main-color);
-  font-size: 1.2em;
+  font-size: 120%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left;
+  color: var(--txt-color);
 }
 
 
@@ -560,33 +661,33 @@ section:nth-of-type(7) p {
 /* SECTION BUTTONS */
 .pagina2 section:nth-of-type(4) {
   position: fixed;
+  margin: 0;
   bottom: 0;
-  background-color: var(--color-buttons);
   width: 100%;
   height: 15%;
-  margin: 0;
+  background-color: var(--bkg-color);
 }
 
 .pagina2 section:nth-of-type(4) h2 {
   font-weight: 500;
-  font-size: 1em;
+  font-size: 100%;
   margin-top: .5em;
 }
 
 .pagina2 section:nth-of-type(4) button:first-of-type {
-  font-weight: 100;
-  font-size: .7em;
-  background-color: var(--background-color);
   padding: .9em 3em;
+  font-weight: 100;
+  font-size: 70%;
+  background-color: var(--background-color);
   border: .5px solid;
 }
 
 .pagina2 section:nth-of-type(4) button:last-of-type {
-  text-transform: uppercase;
+  padding: 1em 3.7em;
   font-weight: 100;
-  font-size: .7em;
+  text-transform: uppercase;
+  font-size: 70%;
   color: var(--textimg-color);
   background-color: var(--background-colorbutton);
-  padding: 1em 3.7em;
   border: .5px solid;
 }
